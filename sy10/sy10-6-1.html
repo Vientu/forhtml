@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自主实验</title>
+</head>
+<body>
+<div style="background-color:#0F6; text-align:center; width:400px;">
+    表单验证<br>
+    <form style="text-align:center;color:#06C;">
+        用&nbsp;&nbsp;户&nbsp;&nbsp;名：<input type="text" id="tname" onfocusout="check1()"><br>
+        密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password" id="pwd" onfocusout="check2()"><br>
+        确认密码：<input type="password" id="repwd" onfocusout="check3()"><br>
+        电子邮件：<input type="text" id="email" onfocusout="check4()"><br>
+        <input type="submit" value="提交">&nbsp;&nbsp;<input type="reset" value="重置">
+    </form>
+</div>
+
+<script>
+    function check1(){
+        var name=document.getElementById("tname").value;
+        var c=name.charAt(0);
+        if(!isNaN(c)){alert("用户名不能以数字开头！")}
+        var len=name.length;
+        if(len<6||len>20)
+        {
+            document.getElementById("tname").value=' ';
+            alert("用户名长度6-20个字符！")}
+    }
+    function check2(){
+        var psw1=document.getElementById("pwd").value;
+        var len=psw1.length;
+        if(len<6||len>10)
+        {
+            document.getElementById("pwd").value=' ';
+            alert("密码长度6-10个字符!")}
+    }
+    function check3(){
+        var psw1=document.getElementById("pwd").value;
+        var psw2=document.getElementById("repwd").value;
+        if(psw1!=psw2){alert("两次输入密码不同!")}
+    }
+    function check4(){
+        var email=document.getElementById("email").value;
+        var index_a=email.indexOf("@");
+        var index_d=email.indexOf(".");
+        if(index_a<0||index_d<0){
+            alert("邮箱地址缺少'@'或'.'");
+            document.getElementById("email").value=' ';
+        }else if(index_a==0){
+            alert("邮箱地址不能以'@'开头");
+        }else if((index_d-index_a)<2){
+            alert("邮箱地址'@'和'.'中间至少隔一个字符");
+        }
+    }
+</script>
+</body>
+</html>

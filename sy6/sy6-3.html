@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格布局</title>
+    <style type="text/css">
+        /* 显示产品名称 */
+        .p1{font-family:"黑体";font-size:20px;color:black}
+        /*显示具体产品*/
+        .p2{font-family:"黑体";font-size:30px;color:black}
+        /*显示每一个子项目标题*/
+        .bt1{color:#6600cc;font-size:25px;font-family:微软雅黑;background-color:#999900}
+        img{width: 200px;height: 150px}
+    </style>
+
+</head>
+<body>
+<table border-color="#ffff00" border="1" bgcolor="#ffff66" width="650px" height="500px">
+    <tr>
+        <th style="width: 200px;height: 150px"><img src="../images/0010.jpg"/></th>
+        <td style="border-bottom-style: none"><p class="p1"> 产品名称:</p>
+            <p class="p2">惠普 4431s&nbsp;(QG641PA)</p></td>
+    </tr>
+<tr>
+    <td colspan="2" class="bt1" height="30px">惠普 4431s（QG641PA） 基本参数</td>
+</tr>
+<tr>
+    <td colspan="2">
+        <table frame="void">
+            <tr>
+                <td>CPU 主频：</td>
+                <td>2400.000</td>
+            </tr>
+            <tr>
+                <td>CPU 系列：</td>
+                <td>英特尔 酷睿 i5 2 代系列（Sandy Bridge）</td>
+            </tr>
+            <tr>
+                <td>CPU 型号：</td>
+                <td>Intel 酷睿 i5 2430M</td>
+            </tr>
+            <tr>
+                <td>内存：</td>
+                <td>DDR3 1333MHz,最大内存容量，16GB</td>
+            </tr>
+            <tr>
+                <td>硬盘：</td>
+                <td>7200转，SATA，750GB</td>
+            </tr>
+            <tr>
+                <td>显卡：</td>
+                <td>1GB，GDDR5,AMD Radeom HD 6490M独立显卡</td>
+            </tr>
+        </table>
+    </td>
+</tr>
+    <tr>
+        <td colspan="2" class="bt1" height="30px">惠普 4431s（QG641PA） 多媒体设备</td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <table frame="void">
+                <tr>
+                    <td>摄像头：</td>
+                    <td>集成摄像头</td>
+                </tr>
+                <tr>
+                    <td>系统音频：</td>
+                    <td>内置音效纠错</td>
+                </tr>
+                <tr>
+                    <td>多媒体：</td>
+                    <td>内置扬声器、麦克风</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="bt1" height="30px">惠普 4431s（QG641PA） 网络通信及其他</td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <table frame="void">
+                <tr>
+                    <td>无线网卡：</td>
+                    <td>支持820......</td>
+                </tr>
+                <tr>
+                    <td>.....：</td>
+                    <td>.....</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

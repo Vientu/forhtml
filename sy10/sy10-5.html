@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>窗口事件处理</title>
+</head>
+<body onunload="stay()">
+<a href="sy10-3.html">跳转</a>
+<script type="text/javascript">
+    pageOpen = new Date();
+    function stay() {
+        pageClose = new Date();   //获取关闭页面的时间
+        minutes = (pageClose.getMinutes()- pageOpen.getMinutes());
+        seconds = (pageClose.getSeconds()-pageOpen.getSeconds());
+        time = (seconds + (minutes * 60));
+        times = (time + " 秒钟 ");
+        alert(' 您在这儿停留了 ' + 'times' + '. 欢迎下次再来 !');
+    }
+</script>
+</body>
+</html>

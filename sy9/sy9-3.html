@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自主实验</title>
+    <style>
+        div{background-color: darkseagreen;width: 600px;}
+        p{text-decoration: #f2f9fd;font-weight: bold}
+    </style>
+</head>
+<body>
+<div>
+    <form>
+        <p>1.判断数字</p><br>
+    输入一个字符：<input type="text" id="achar">
+        &nbsp;&nbsp;&nbsp;&nbsp;<input type="button" onclick="firstf() " value="check">
+    </form>
+    <script >
+        function firstf() {
+            var c=document.getElementById("achar").value;
+            var x=0;
+          for(var i=0;i<c.length;i++) {
+              if (c.charAt(i) < '0' || c.charAt(i) > '9') {
+                  alert("输入的字符不是数字");
+                  return x = 1;
+              }
+          }
+              if(x==0){
+                  var a = parseFloat(c);
+                  var b = parseInt(c);
+                  alert(c + "  转换成浮点数：" + a + "\n" + "转换成整型：" + b);
+          }
+        }
+    </script>
+<p>2.摇奖程序</p>
+    <form>
+        <input type="text" readonly="readonly" id="yao">
+        &nbsp;&nbsp;&nbsp;&nbsp;<input type="button" onclick="secondf()" value="点我获取号码">
+    </form>
+    <script>
+        function secondf() {
+            var a=new Array();
+            for(var i=0;i<3;i++){
+                a[i]=parseInt(Math.random()*10);
+            }
+        for (var i=0;i<3;i++){
+            if (a[i]==a[i+1])
+                a[i]=a[i]+1;
+        }
+        document.getElementById("yao").value=a.join(' ');
+        }
+    </script>
+    <p>3.计算出生天数</p>
+    假设生日为：1999.09.09<br>
+    <script type="text/javascript">
+     var d1=new Date("1999-09-09");
+     var d2=new Date();
+        var allday=parseInt((d2.getTime()-d1.getTime())/(1000*60*60*24));
+        document.writeln("出生到现在的天数："+allday);
+    </script>
+    <p>4.判断邮箱合法性</p>
+    <form>
+        输入一个邮箱地址：<input type="text"  id="email">
+        &nbsp;&nbsp;&nbsp;&nbsp;<input type="button" onclick="thirdf()" value="check">
+    </form>
+    <script>
+        function thirdf() {
+            var emailad=document.getElementById("email").value;
+            if(!emailad.match(/@/g)||!emailad.match(/./g))
+                alert("no '@' or '.'")
+            else if(emailad.charAt(0)=='@'||(emailad.indexOf('.')-emailad.indexOf('@')<=1))
+                alert("邮箱地址错误")
+            else alert("地址正确")
+        }
+    </script>
+    <p>5.冒泡排序数组</p>
+    <form>
+        <input type="button" onclick="fouthf()" value="随机生成数组">&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="farray" readonly="readonly" size="50px"><br>
+        冒 泡 排 序&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="paxu" readonly="readonly" size="50px">
+    </form>
+<script>
+    function fouthf() {
+        var x=new Array();
+        x[0]=parseInt(Math.random()*100);
+        for(var i=1;i<10;i++){
+            x[i]=parseInt(Math.random()*100-1);
+            if (x[i]==x[i-1])
+                x[i]+=1;
+        }
+        document.getElementById("farray").value=x.join(' ');
+
+        for(var i=0;i<10;i++) {
+            for (var j =i+1; j <10; j++) {
+                if (x[i] > x[j]) {
+                    var tem = x[i];
+                    x[i] = x[j];
+                    x[j] = tem;
+                }
+            }
+        }
+        document.getElementById("paxu").value=x.join(' ')
+    }
+</script>
+</div>
+</body>
+</html>

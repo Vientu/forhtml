@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        form{text-align:center;}
+        div{background:#33ff99;width:400px;height:200px;margin:0 auto;}
+
+    </style>
+</head>
+<body>
+<div  id="div" onMouseOver="mover()" onMouseOut="mout()" onMouseMove="mmove()" onMouseDown="mdown()" >
+    <h3 align="center">鼠标事件处理</h3>
+    <hr size="2" color="red"/>
+    <form name="mouseForm" onMouseDown="mdown()" onClick="mclick()" onDblClick="mdclick()">
+        <input type="text" value="" name="txt"><input type="button" value="  "   >
+    </form>
+</div>
+<script>
+    function mover() {
+        document.getElementById("div").style.backgroundColor="#99cc66";
+    }
+    function mout() {
+        document.getElementById("div").style.backgroundColor="#ff33ff";
+    }
+    function mmove() {
+        document.getElementById("div").style.backgroundColorr="#0033ff";
+    }
+    function mdown() {
+        document.mouseForm.txt.value="按下鼠标";
+    }
+    function mclick() {
+        document.mouseForm.txt.value="单击鼠标";
+    }
+    function mdclick() {
+        document.mouseForm.txt.value="双击鼠标";
+    }
+</script>
+</body>
+</html>

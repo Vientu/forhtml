@@ -1,0 +1,18 @@
+body {
+    background: #f8f8f8;
+    text-align: left;
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    color: #555;
+    font-size: 16px;
+    font-weight: 400;
+}
+.header {
+    height: 120px;
+    margin-le: 10,10,10,10; /*外边距*/
+    padding-bottom: 5px;
+    background: #f8f8f8 url(../images/007.jpg) left top repeat;
+    border-top: 3px solid #eb4141;
+    -moz-box-shadow: 0 0px 5px 0 rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 0px 5px 0 rgba(0,0,0,.3);
+    box-shadow: 0 0px 5px 0 rgba(0,0,0,.3);
+}

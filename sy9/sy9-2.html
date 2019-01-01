@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{background:#CDEBE6;color:#330000; width:750px;font-size:20px;font-weight:bolder;} h4{text-align:center;}
+        b{color:red;font-size:18px;}
+    </style>
+</head>
+<body>
+<div>
+    <b>1.Array对象的使用<br/></b>
+<script type="text/javascript">
+    document.writeln("for循环显示数组："+"<br/>");
+    var  ray=new Array("张三","李四","王五","赵六","孙七");
+    for(var i=0;i<ray.length;i++){
+        document.write(ray[i]+"  ")
+    }
+    document.writeln("<br/>"+"for...in循环显示数组："+"<br/>");
+    for(var index in ray){
+        document.write(ray[index]+"  ");
+    }
+</script>
+    <b><br/>2.Math对象的使用<br/></b>
+    <script type="text/javascript">
+        document.writeln("PI的五次方:"+Math.pow(Math.PI,5)+"<br/>")
+        var x=Math.round(Math.pow(Math.PI,5));
+        document.writeln("四舍五入："+x+"<br/>")
+        document.writeln("随机显示10个两位数："+"<br/>")
+        for(var i=0;i<10;i++){
+            var x= parseInt(Math.random()*100+Math.random()*10);
+            document.writeln(x+"<br/>")
+        }
+    </script>
+    <b>3.Data对象的使用<br/></b>
+    <script type="text/javascript">
+        var currentdata=new Date();
+        var year=currentdata.getFullYear();
+        var mouth=currentdata.getMonth();
+        var day=currentdata.getDate();
+        var wonder=currentdata.getDay();
+        var hour=currentdata.getHours();
+        var minutes=currentdata.getMinutes();
+        var second=currentdata.getSeconds();
+        if(hour<12)
+        document.writeln("当前时间是："+year+"年"+mouth+"月"+day+"日"+"<br/>"+
+        "星期"+wonder+"<br/>"+hour+":"+minutes+":"+second+"  am");
+        else
+            document.writeln("当前时间是："+year+"年"+mouth+"月"+day+"日"+"<br/>"+
+                "星期"+wonder+"<br/>"+hour+":"+minutes+":"+second+"  pm")
+    </script>
+    <b><br/>4.string对象的使用<br/></b>
+    <form>
+        输入字符串：<input type="text" id="str"><br/>
+        新的字符串：<input type="text" id="newstr" readonly="readonly">
+        <input type="button" onclick="myclick()" value="my-click">
+    </form>
+    <script>
+        function myclick() {
+            var str  = new String(document.getElementById("str").value).toUpperCase();
+            var newstr=new Array();
+
+            //console.log(parseInt(str.length/2));
+             for (var i=str.length; i>=0; i--)
+             {
+                 var a=(str.length-i)-1;
+                 var tem=str[i];
+                 newstr[a]=tem;
+             }
+
+            document.getElementById("newstr").value = newstr.join('');
+            return;
+        }
+    </script>
+</div>
+</body>
+</html>

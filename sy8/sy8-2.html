@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>改变字号</title>
+    <script>
+        function setFont(size){
+            var obj=document.getElementById("content"); 	//通过 id 获取页面元素
+            obj.style.fontSize=size;  	 	//将该页面元素的字号设置为指定大小
+        }
+    </script>
+</head>
+<body>
+<h3 align="center"><b>用JavaScript代码改变网页字号大小</b></h3>
+<center>
+选择字号【<a href="javascript:setFont('12px')">小</a><!--简约化调用-->
+<a href="#" onclick="javascript:setFont('18px');">中</a><!--事件调用-->
+<a href="#" onclick="javascript:setFont('25px');">大</a>】
+</center>
+<div id="content" style="background-color: #CCCCCC">
+<p >JavaScript是一种能让你的网页更加生动活泼的程序语言。。。</p>
+</div>
+</body>
+</html>
